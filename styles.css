@@ -151,8 +151,8 @@ footer {
 
 /* Profile picture styling */
 .profile-pic {
-  width: 90px;  /* Increased size */
-  height: 90px;
+  width: 130px;  /* Increased size */
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
@@ -161,7 +161,7 @@ footer {
 /* Company and Education logos */
 .company-logo,
 .edu-logo {
-  width: 60px;  /* Increased size */
+  width: 85px;  /* Increased size */
   height: auto;
   margin-right: 10px;
   vertical-align: middle;
