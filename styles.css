@@ -26,6 +26,7 @@ header {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
   align-items: center;
 }
 
@@ -147,4 +148,22 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
+}
+
+/* Profile picture styling */
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Company and Education logos */
+.company-logo,
+.edu-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
 }
