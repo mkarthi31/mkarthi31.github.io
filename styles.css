@@ -1,0 +1,150 @@
+body {
+  background: #f0f0f0;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(0, 170, 255, 0.1) 25%, rgba(0, 170, 255, 0.1) 26%, transparent 27%),
+    linear-gradient(90deg, transparent 24%, rgba(0, 170, 255, 0.1) 25%, rgba(0, 170, 255, 0.1) 26%, transparent 27%);
+  background-size: 50px 50px;
+  font-family: 'Space Mono', monospace;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header and Navigation */
+header {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #003366;
+}
+
+header p {
+  margin: 5px 0 15px;
+  font-size: 1.1em;
+  color: #666;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00aaff;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+/* Container for Sections */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffffee;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+section h2 {
+  border-bottom: 2px solid #00aaff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Text and List Items */
+section p,
+section li {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Cards for Experience, Education, Projects */
+.experience-item,
+.education-item,
+.project-card {
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3,
+.education-item h3,
+.project-card h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+/* Date styling */
+.date {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Links */
+a {
+  color: #00aaff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0077cc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container,
+  .container {
+    padding: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
