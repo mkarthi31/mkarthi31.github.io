@@ -14,8 +14,7 @@ body {
 header {
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
+  /* Removed sticky positioning to prevent header from always being visible */
   width: 100%;
   z-index: 100;
 }
@@ -152,17 +151,17 @@ footer {
 
 /* Profile picture styling */
 .profile-pic {
-  width: 100px;
-  height: 100px;
+  width: 70px;  /* Reduced size */
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 /* Company and Education logos */
 .company-logo,
 .edu-logo {
-  width: 50px;
+  width: 40px;  /* Reduced size */
   height: auto;
   margin-right: 10px;
   vertical-align: middle;
