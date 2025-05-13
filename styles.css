@@ -10,11 +10,9 @@ body {
   color: #333;
 }
 
-/* Header and Navigation */
 header {
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Removed sticky positioning to prevent header from always being visible */
   width: 100%;
   z-index: 100;
 }
@@ -64,7 +62,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Container for Sections */
 .container {
   max-width: 900px;
   margin: 20px auto;
@@ -74,7 +71,6 @@ nav a:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Titles */
 section h2 {
   border-bottom: 2px solid #00aaff;
   padding-bottom: 10px;
@@ -82,14 +78,12 @@ section h2 {
   color: #003366;
 }
 
-/* Text and List Items */
 section p,
 section li {
   font-size: 1em;
   line-height: 1.6;
 }
 
-/* Cards for Experience, Education, Projects */
 .experience-item,
 .education-item,
 .project-card {
@@ -107,14 +101,12 @@ section li {
   color: #003366;
 }
 
-/* Date styling */
 .date {
   font-size: 0.9em;
   color: #666;
   margin-bottom: 10px;
 }
 
-/* Links */
 a {
   color: #00aaff;
   text-decoration: none;
@@ -126,7 +118,6 @@ a:hover {
   color: #0077cc;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px 0;
@@ -137,7 +128,6 @@ footer {
   color: #666;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .header-container,
   .container {
@@ -149,19 +139,17 @@ footer {
   }
 }
 
-/* Profile picture styling */
 .profile-pic {
-  width: 130px;  /* Increased size */
+  width: 130px;
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
-/* Company and Education logos */
 .company-logo,
 .edu-logo {
-  width: 85px;  /* Increased size */
+  width: 85px;
   height: auto;
   margin-right: 10px;
   vertical-align: middle;
