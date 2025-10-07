@@ -1,157 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karthigan's Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karthigan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-  <header>
-    <div class="header-container">
-      <img src="images/profile_pic.jpg" alt="Karthigan Mageswaran" class="profile-pic">
-      <h1>Karthigan Mageswaran</h1>
-      <p>Software Developer | Computer Science Student</p>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#achievements">Achievements</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">KM.</a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                 <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <button class="mobile-nav-toggle" aria-controls="main-nav" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <main>
-        <section id="about" class="container">
-      <h2>About Me</h2>
-      <p>
-        A final-year BSC Computer Science student at the University of Leicester, graduating with strong proficiency in Python, Java, and web development. Demonstrated creative problem-solving and innovation as a winner of the Network Rail Diverse IT competition. Eager to launch a career in software engineering, applying my technical skills to deliver impactful, real-world solutions through a challenging graduate scheme.
-      </p>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="images/profile_pic.jpg" alt="Karthigan Mageswaran" class="profile-pic">
+                <h1 class="hero-title">Karthigan Mageswaran</h1>
+                <p class="hero-subtitle">
+                    <span class="typing-effect"></span>
+                </p>
+                <div class="hero-links">
+                    <a href="mailto:m.karthigan31@gmail.com">m.karthigan31@gmail.com</a>
+                    <a href="https://linkedin.com/in/karthi-mageswaran" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/mkarthi31" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
 
-        <section id="skills" class="container">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> Java, Python, SQL, JavaScript, HTML5/CSS3</li>
-        <li><strong>Frameworks & Libraries:</strong> Spring Boot, JSP</li>
-        <li><strong>Databases:</strong> MySQL</li>
-        <li><strong>Developer Tools:</strong> Git, Swagger, Postman</li>
-        <li><strong>Methodologies:</strong> Agile, Scrum</li>
-      </ul>
-    </section>
+        <section id="about" class="container animated">
+            <h2>About Me</h2>
+            <p>
+                A final-year BSC Computer Science student at the University of Leicester, graduating with strong proficiency in Python, Java, and web development. Demonstrated creative problem-solving and innovation as a winner of the Network Rail Diverse IT competition. Eager to launch a career in software engineering, applying my technical skills to deliver impactful, real-world solutions through a challenging graduate scheme.
+            </p>
+        </section>
 
-        <section id="experience" class="container">
-      <h2>Experience</h2>
-      <div class="experience-item">
-        <img src="images/aaglobal.png" alt="AaGlobal Logo" class="company-logo">
-        <h3>Interpreter, AaGlobal</h3>
-        <p class="date"><em>June 2024 – Present</em></p>
-        <ul>
-          <li>Deliver precise, confidential interpretation for sensitive appointments in high-stakes medical and legal settings.</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <img src="images/tesco.png" alt="Tesco Logo" class="company-logo">
-        <h3>Shift Leader, Tesco</h3>
-        <p class="date"><em>Jan 2022 – Present</em></p>
-        <ul>
-          <li>Promoted from Customer Assistant to a 'Step Up' Shift Leader. Lead and coordinate a team of 3+ colleagues during high-volume weekly shifts, managing all key store operations.</li>
-          <li>Entrusted with keyholder responsibilities, including overseeing store operations, managing cash flow, and ensuring security procedures are met.</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <img src="images/ollak.png" alt="Ollak Logo" class="company-logo">
-        <h3>IT Technician, Ollak Limited</h3>
-        <p class="date"><em>October 2021 – February 2023</em></p>
-        <ul>
-          <li>Provided front-line technical support to clients, diagnosing and resolving hardware/software issues to maintain a 95% client satisfaction rate.</li>
-          <li>Collaborated with senior management on a company-wide rebranding initiative, contributing to the new web design and digital presence.</li>
-        </ul>
-      </div>
-    </section>
+        <section id="skills" class="container animated">
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Languages:</strong> Java, Python, SQL, JavaScript, HTML5/CSS3</li>
+                <li><strong>Frameworks & Libraries:</strong> Spring Boot, JSP</li>
+                <li><strong>Databases:</strong> MySQL</li>
+                <li><strong>Developer Tools:</strong> Git, Swagger, Postman</li>
+                <li><strong>Methodologies:</strong> Agile, Scrum</li>
+            </ul>
+        </section>
 
-        <section id="education" class="container">
-      <h2>Education</h2>
-      <div class="education-item">
-        <img src="images/unileicester.png" alt="University of Leicester Logo" class="edu-logo">
-        <h3>University of Leicester</h3>
-        <p>BSc Computer Science (Expected: First-Class Honours) | Sep 2023 – Jul 2026</p>
-        <p>
-          <strong>Relevant Modules:</strong> Algorithms & Data Structures, Software Architecture, Database & Domain Modelling, Internet & Cloud Computing.
-        </p>
-      </div>
-    </section>
+        <section id="experience" class="container animated">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/aaglobal.png" alt="AaGlobal Logo" class="company-logo">
+                        <h3>Interpreter, AaGlobal</h3>
+                        <p class="date">June 2024 – Present</p>
+                        <ul>
+                            <li>Deliver precise, confidential interpretation for sensitive appointments in high-stakes medical and legal settings.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/tesco.png" alt="Tesco Logo" class="company-logo">
+                        <h3>Shift Leader, Tesco</h3>
+                        <p class="date">Jan 2022 – Present</p>
+                        <ul>
+                            <li>Promoted from Customer Assistant to a 'Step Up' Shift Leader. Lead and coordinate a team of 3+ colleagues during high-volume weekly shifts, managing all key store operations.</li>
+                            <li>Entrusted with keyholder responsibilities, including overseeing store operations, managing cash flow, and ensuring security procedures are met.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/ollak.png" alt="Ollak Logo" class="company-logo">
+                        <h3>IT Technician, Ollak Limited</h3>
+                        <p class="date">October 2021 – February 2023</p>
+                        <ul>
+                            <li>Provided front-line technical support to clients, diagnosing and resolving hardware/software issues to maintain a 95% client satisfaction rate.</li>
+                            <li>Collaborated with senior management on a company-wide rebranding initiative, contributing to the new web design and digital presence.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education" class="container animated">
+            <h2>Education</h2>
+            <div class="education-item">
+                <img src="images/unileicester.png" alt="University of Leicester Logo" class="edu-logo">
+                <h3>University of Leicester</h3>
+                <p>BSc Computer Science (Expected: First-Class Honours) | Sep 2023 – Jul 2026</p>
+                <p><strong>Relevant Modules:</strong> Algorithms & Data Structures, Software Architecture, Database & Domain Modelling, Internet & Cloud Computing.</p>
+            </div>
+        </section>
 
-        <section id="achievements" class="container">
-      <h2>Achievements & Certifications</h2>
-      <ul>
-        <li>
-          <strong>Winner, Network Rail Diverse IT Competition (2021)</strong> - Selected as one of 50 winners nationwide for an innovative tech solution in a national competition.
-        </li>
-      </ul>
-    </section>
+        <section id="achievements" class="container animated">
+            <h2>Achievements</h2>
+             <div class="achievement-item">
+                <h3>Winner, Network Rail Diverse IT Competition (2021)</h3>
+                <p>Selected as one of 50 winners nationwide for an innovative tech solution in a national competition.</p>
+            </div>
+        </section>
 
-        <section id="projects" class="container">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Personal Cybersecurity Dashboard (Demo)</h3>
-        <p>
-          A Python-based project that allows users to monitor email breaches and assess password strength. Currently runs in demo mode with mock data, prepared to integrate real APIs (HaveIBeenPwned, EmailRep) and real email alerts. Features include a Streamlit UI, SQLite database for storing breaches, password strength evaluation, and automated scheduler for daily checks.
-        </p>
-        <a href="https://github.com/mkarthi31/personal-cybersecurity-dashboard" target="_blank">View on GitHub</a>
-      </div>
+        <section id="projects" class="container animated">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Personal Cybersecurity Dashboard</h3>
+                    <p>A Python-based tool to monitor email breaches and assess password strength using a Streamlit UI and SQLite.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/mkarthi31/personal-cybersecurity-dashboard" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                 <div class="project-card">
+                    <h3>Shop Management System</h3>
+                    <p>A system using Java, Spring Boot, and JSPs to manage shops and products, built for Software Architecture coursework.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/mkarthi31/Shop-Management-System/tree/main" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>RESTful API for Course Management</h3>
+                    <p>A RESTful API using Java Spring Boot with full CRUD operations and Swagger documentation for coursework.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/mkarthi31/Course-Management-API" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>VisitMK Tourism Website</h3>
+                    <p>A high-fidelity prototype for a tourism platform enabling event bookings and tour customisation.</p>
+                    <div class="project-links">
+                        <a href="https://mkarthi31.github.io/VisitMK/" target="_blank">View Live</a>
+                        <a href="https://github.com/mkarthi31/VisitMK" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>IBM SkillsBuild Gamified App</h3>
+                    <p>A group project designing a web app to boost user engagement on IBM SkillsBuild through gamification.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/mkarthi31/IBM-SkillsBuild-App" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>TechCon 2023 Website</h3>
+                    <p>A responsive conference website developed using vanilla HTML, CSS, and JavaScript.</p>
+                    <div class="project-links">
+                        <a href="https://mkarthi31.github.io/TechCon" target="_blank">View Live</a>
+                        <a href="https://github.com/mkarthi31/TechCon/tree/main" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="project-card">
-        <h3>TechCon 2023 Website</h3>
-        <p>A website developed using HTML, CSS, and JavaScript.</p>
-        <a href="https://mkarthi31.github.io/TechCon" target="_blank">View Live</a>
-        <a href="https://github.com/mkarthi31/TechCon/tree/main" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>XYZBank Loan Management System</h3>
-        <p>A bank loan management system based on Java.</p>
-        <a href="https://github.com/mkarthi31/XYZBank/tree/main" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Shop Management System</h3>
-        <p>A shop management system developed using Java, Spring Boot, and JSPs, allowing management of shops and products as part of Software Architecture coursework.</p>
-        <a href="https://github.com/mkarthi31/Shop-Management-System/tree/main">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>VisitMK Tourism Website (Prototype)</h3>
-        <p>A high-fidelity prototype for a tourism platform in Milton Keynes, enabling event bookings and tour customisation, developed for User Interface Design coursework.</p>
-        <a href="https://mkarthi31.github.io/VisitMK/" target="_blank">View Live</a>
-        <a href="https://github.com/mkarthi31/VisitMK" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>IBM SkillsBuild Gamified Learning App</h3>
-        <p>A group project designing an external web application integrated with IBM SkillsBuild, aimed at boosting user engagement through gamification features such as friendship systems, leaderboards, and achievement badges.</p>
-        <a href="https://github.com/mkarthi31/IBM-SkillsBuild-App" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>RESTful API for Course Management</h3>
-        <p>Developed a RESTful API using Java Spring Boot, implementing CRUD operations, Swagger documentation, and API testing, as part of advanced programming coursework.</p>
-        <a href="https://github.com/mkarthi31/Course-Management-API" target="_blank">View on GitHub</a>
-      </div>
-    </section>
+        <section id="contact" class="container animated">
+            <h2>Get In Touch</h2>
+            <p>
+                I'm currently seeking new opportunities and would love to hear from you. 
+                The best way to reach me is through email or LinkedIn.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:m.karthigan31@gmail.com" class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>m.karthigan31@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/karthi-mageswaran" target="_blank" class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <span>linkedin.com/in/karthi-mageswaran</span>
+                </a>
+                <a href="https://github.com/mkarthi31" target="_blank" class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>github.com/mkarthi31</span>
+                </a>
+            </div>
+        </section>
+    </main>
 
-        <section id="contact" class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:m.karthigan31@gmail.com">m.karthigan31@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/karthi-mageswaran" target="_blank">linkedin.com/in/karthi-mageswaran</a></p>
-      <p>GitHub: <a href="https://github.com/mkarthi31" target="_blank">github.com/mkarthi31</a></p>
-    </section>
-  </main>
+    <footer>
+        <p>&copy; 2025 Karthigan Mageswaran</p>
+    </footer>
 
-  <footer class="container">
-    <p>&copy; 2025 Karthigan Mageswaran</p>
-  </footer>
 </body>
 </html>
