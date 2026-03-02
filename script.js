@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // -----------------------------
     const typingElement = document.querySelector('.typing-effect');
     if (typingElement) {
-        const words = ["Software Developer", "Computer Science Student"];
+        const words = [ "Computer Science Student"];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
