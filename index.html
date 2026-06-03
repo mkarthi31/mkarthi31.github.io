@@ -1,219 +1,183 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karthigan's Portfolio</title>
+    <title>Karthigan Mageswaran | Software Engineer</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <script src="script.js" defer></script>
 </head>
 <body>
-
-    <header class="header">
-        <div class="header-container">
-            <a href="#" class="logo">KM.</a>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">KM.</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
             </nav>
-            <div class="header-actions">
-                 <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-                <button class="mobile-nav-toggle" aria-controls="main-nav" aria-expanded="false">
-                    <span class="sr-only">Menu</span>
-                </button>
-            </div>
+            <a href="mailto:m.karthigan31@gmail.com" class="btn-primary">Contact</a>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
+    <main class="container">
+        <section class="hero fade-in">
             <div class="hero-content">
-                <img src="images/profile_pic.jpg" alt="Karthigan Mageswaran" class="profile-pic">
                 <h1 class="hero-title">Karthigan Mageswaran</h1>
-                <p class="hero-subtitle">
-                    <span class="typing-effect"></span>
+                <h2 class="hero-subtitle">Software Engineer</h2>
+                <p class="hero-text">
+                    Final-year Computer Science undergraduate at the University of Leicester. Architecting secure, production-grade cloud infrastructure, resilient backend systems, and multi-user platforms.
                 </p>
-                <div class="hero-links">
-                    <a href="mailto:m.karthigan31@gmail.com">m.karthigan31@gmail.com</a>
-                    <a href="https://linkedin.com/in/karthi-mageswaran" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/mkarthi31" target="_blank">GitHub</a>
+                <div class="social-links">
+                    <a href="https://github.com/mkarthi31" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://linkedin.com/in/karthi-mageswaran" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://karthigan.com" target="_blank" rel="noopener">karthigan.com</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="container animated">
-            <h2>About Me</h2>
-            <p>
-                A final-year BSc Computer Science undergraduate merging robust technical engineering capabilities with extensive operational leadership. Proficient in full-stack development (Python, Java) and accustomed to managing complex workflows in fast-paced environments. I am seeking to launch a career in the technology sector, applying my analytical problem-solving skills and strong sense of ownership to deliver secure, impactful, and operationally resilient solutions.
-            </p>
+        <section id="projects" class="section fade-in">
+            <h3 class="section-title">Engineering Projects</h3>
+            <div class="bento-grid">
+                
+                <article class="bento-card highlight-card">
+                    <div class="card-header">
+                        <h4>University Accommodation Allocation System</h4>
+                        <span class="status">Final Year Project</span>
+                    </div>
+                    <p class="card-desc">
+                        Designed a four-stage hybrid allocation engine (group clustering, greedy preference matching) processing 25 concurrent applications in under 5 seconds. Engineered RBAC with server-side jurisdictional isolation and JWT session management. Built a GPT-4o-mini conversational assistant using Spring AI function-calling, grounded against curated knowledge bases to enforce policy boundaries.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Spring Boot 3.2</span>
+                        <span>React 18</span>
+                        <span>Stripe</span>
+                        <span>OpenAI (Spring AI)</span>
+                        <span>MySQL</span>
+                    </div>
+                </article>
+
+                <article class="bento-card">
+                    <div class="card-header">
+                        <h4>Personal Cybersecurity Dashboard</h4>
+                    </div>
+                    <p class="card-desc">
+                        Standalone security monitoring tool assessing password entropy using the zxcvbn algorithm and simulating email breach threat-intelligence tracking. Implemented a local SQLite database for persistent alert logging.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>SQLite</span>
+                        <span>zxcvbn-python</span>
+                    </div>
+                </article>
+
+                <article class="bento-card">
+                    <div class="card-header">
+                        <h4>Subscription Tracker</h4>
+                    </div>
+                    <p class="card-desc">
+                        Secure multi-user web application with Spring Security authentication, BCrypt-encrypted password reset flows, and automated scheduled financial alerts via full CRUD operations.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Java</span>
+                        <span>Spring Security</span>
+                        <span>MySQL</span>
+                    </div>
+                </article>
+
+                <article class="bento-card">
+                    <div class="card-header">
+                        <h4>IBM SkillsBuild Integration</h4>
+                    </div>
+                    <p class="card-desc">
+                        Collaborated in an Agile team to engineer backend REST APIs for user achievement and engagement tracking, ensuring the secure transmission of user metrics.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>REST APIs</span>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section id="skills" class="container animated">
-            <h2>Technical Skills</h2>
-            <ul class="skills-list">
-                <li><strong>Languages:</strong> Java, Python, SQL, JavaScript, HTML5/CSS3</li>
-                <li><strong>Frameworks & Libraries:</strong> Spring Boot, JSP, Streamlit</li>
-                <li><strong>Databases:</strong> MySQL, SQLite</li>
-                <li><strong>Developer Tools:</strong> Git, Swagger, Postman</li>
-                <li><strong>Methodologies:</strong> Agile, Scrum</li>
-            </ul>
-        </section>
-
-        <section id="experience" class="container animated">
-            <h2>Experience</h2>
+        <section id="experience" class="section fade-in">
+            <h3 class="section-title">Operational & Professional Experience</h3>
             <div class="timeline">
+                
                 <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="date">Jan 2022 – Present</span>
+                    </div>
                     <div class="timeline-content">
-                        <img src="images/aaglobal.png" alt="AaGlobal Logo" class="company-logo">
-                        <h3>Interpreter, AaGlobal</h3>
-                        <p class="date">June 2024 – Present</p>
-                        <ul>
-                            <li>Provide precise interpretation services for sensitive appointments in high-stakes medical and legal settings, maintaining absolute adherence to data confidentiality and integrity policies.</li>
-                        </ul>
+                        <h4>Shift Leader</h4>
+                        <h5>Tesco</h5>
+                        <p>Managing day-to-day operations and leading teams across high-volume shifts. Executing keyholder responsibilities, including physical security and strict compliance workflows. Sustaining parallel professional roles whilst maintaining a First-Class academic trajectory.</p>
                     </div>
                 </div>
+
                 <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="date">Jun 2022 – Jan 2025</span>
+                    </div>
                     <div class="timeline-content">
-                        <img src="images/tesco.png" alt="Tesco Logo" class="company-logo">
-                        <h3>Shift Leader, Tesco</h3>
-                        <p class="date">Jan 2022 – Present</p>
-                        <ul>
-                            <li>Manage day-to-day operations and lead a team of colleagues during high-volume weekend shifts, ensuring strict adherence to corporate security procedures and efficient operational workflows.</li>
-                            <li>Execute keyholder responsibilities, managing cash flow reconciliation, physical security, and task prioritisation to meet stringent business standards.</li>
-                        </ul>
+                        <h4>Freelance Interpreter (Tamil & Italian)</h4>
+                        <h5>AaGlobal Language Services</h5>
+                        <p>Delivered professional interpretation in high-stakes medical and legal settings, operating under strict data confidentiality requirements and professional conduct standards.</p>
                     </div>
                 </div>
+
                 <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="date">Oct 2021 – Feb 2023</span>
+                    </div>
                     <div class="timeline-content">
-                        <img src="images/ollak.png" alt="Ollak Logo" class="company-logo">
-                        <h3>IT Technician, Ollak Limited</h3>
-                        <p class="date">October 2021 – February 2023</p>
-                        <ul>
-                            <li>Provided technical support and troubleshooting for various software and hardware issues, achieving a 95% client satisfaction rate through the rapid deployment of technically sound solutions.</li>
-                            <li>Assisted with practical IT solutions, including network setup and digital strategy for local businesses, standardising operational protocols.</li>
-                        </ul>
+                        <h4>IT Technician</h4>
+                        <h5>Ollak Limited</h5>
+                        <p>Provided technical support across software, hardware, and network configuration for local businesses, achieving a 95% client satisfaction rate.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-        <section id="education" class="container animated">
-            <h2>Education</h2>
-            <div class="education-item">
-                <img src="images/unileicester.png" alt="University of Leicester Logo" class="edu-logo">
-                <h3>University of Leicester</h3>
-                <p>BSc Computer Science (Expected: First-Class Honours) | Sep 2023 – Jul 2026</p>
-                <p><strong>Relevant Modules:</strong> Algorithms & Data Structures, Software Architecture, Database & Domain Modelling, Internet & Cloud Computing.</p>
+
             </div>
         </section>
 
-        <section id="achievements" class="container animated">
-            <h2>Achievements</h2>
-             <div class="achievement-item">
-                <h3>Winner, Network Rail Diverse IT Competition (2021)</h3>
-                <p>Selected as one of 50 winners nationwide for an innovative tech solution in a national competition.</p>
+        <section id="skills" class="section fade-in">
+            <h3 class="section-title">Technical Competencies</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <p>Python, Java, JavaScript (ES6+), Bash / Shell, SQL, HTML5 / CSS3</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks</h4>
+                    <p>Spring Boot, Spring Security, React 18, Streamlit, Tailwind CSS</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Infrastructure & Security</h4>
+                    <p>JWT, BCrypt, PCI-DSS compliance via Stripe tokenisation, REST APIs</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases & Tools</h4>
+                    <p>MySQL, SQLite, Hibernate, Git, Postman, Swagger, Agile / Scrum</p>
+                </div>
             </div>
         </section>
 
-        <section id="projects" class="container animated">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Personal Subscription Tracker</h3>
-                    <p class="tech-stack"><strong>Tech Stack:</strong> Java, Spring Boot, Spring Security, MySQL, Thymeleaf</p>
-                    <ul>
-                        <li>Engineered a secure, full-stack application featuring a multi-user environment with an encrypted password reset flow and automated scheduled alerts.</li>
-                        <li>Implemented full CRUD operations and financial analytics to track and optimise recurring user expenditures securely.</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="https://github.com/mkarthi31/subscription-tracker" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>IBM SkillsBuild Gamified Learning App</h3>
-                    <p class="tech-stack"><strong>Tech Stack:</strong> Java, Spring Boot, JavaScript, REST APIs</p>
-                    <ul>
-                        <li>Collaborated in an Agile team to design and integrate an external gamification web app with the IBM SkillsBuild platform.</li>
-                        <li>Developed the backend architecture for user achievement systems, ensuring the secure transmission and storage of user engagement metrics.</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="https://github.com/mkarthi31/IBM-SkillsBuild-Gamified-App" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Personal Cybersecurity Dashboard</h3>
-                    <p class="tech-stack"><strong>Tech Stack:</strong> Python, Streamlit, SQLite, zxcvbn-python</p>
-                    <ul>
-                        <li>Developed a standalone risk monitoring tool designed to assess password entropy and track threat intelligence via mock email breach data.</li>
-                        <li>Integrated a local SQLite database to track alerts and validate the operational effectiveness of the underlying security protocols.</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="https://github.com/mkarthi31/personal-cybersecurity-dashboard" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-            </div> <h3 class="subsection-title">Other Noteworthy Projects</h3>
-            <div class="project-grid"> <div class="project-card">
-                    <h3>Shop Management System</h3>
-                    <p>A system using Java, Spring Boot, and JSPs to manage shops and products, built for Software Architecture coursework.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/mkarthi31/Shop-Management-System/tree/main" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>VisitMK Tourism Website</h3>
-                    <p>A high-fidelity prototype for a tourism platform enabling event bookings and tour customisation using HTML, CSS, and JavaScript.</p>
-                    <div class="project-links">
-                        <a href="https://mkarthi31.github.io/VisitMK/" target="_blank">View Live</a>
-                        <a href="https://github.com/mkarthi31/VisitMK" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>TechCon 2023 Website</h3>
-                    <p>A responsive conference website developed using HTML, CSS, and JavaScript.</p>
-                    <div class="project-links">
-                        <a href="https://mkarthi31.github.io/TechCon" target="_blank">View Live</a>
-                        <a href="https://github.com/mkarthi31/TechCon/tree/main" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                </div> </section>
-
-        <section id="contact" class="container animated">
-            <h2>Get In Touch</h2>
-            <p>
-                I'm currently seeking new opportunities and would love to hear from you. 
-                The best way to reach me is through email or LinkedIn.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:m.karthigan31@gmail.com" class="contact-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    <span>m.karthigan31@gmail.com</span>
-                </a>
-                <a href="https://linkedin.com/in/karthi-mageswaran" target="_blank" class="contact-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    <span>linkedin.com/in/karthi-mageswaran</span>
-                </a>
-                <a href="https://github.com/mkarthi31" target="_blank" class="contact-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                    <span>github.com/mkarthi31</span>
-                </a>
+        <section id="about" class="section fade-in">
+            <div class="about-container">
+                <h3 class="section-title">Education & Achievements</h3>
+                <p><strong>BSc Computer Science (Expected: First-Class Honours)</strong> — University of Leicester (Sep 2022 – Jul 2026)</p>
+                <p class="modules">Core Modules: Foundations of Cyber Security, Operating Systems & Networks, Software Architecture, Algorithms & Data Structures, Internet & Cloud Computing.</p>
+                <p class="award"><em>Winner, Network Rail Diverse IT Competition (2021)</em> — Selected as one of 50 winners nationwide for an innovative tech solution.</p>
             </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2025 Karthigan Mageswaran</p>
+        <p>&copy; 2026 Karthigan Mageswaran. Architected for performance.</p>
     </footer>
-
 </body>
 </html>
