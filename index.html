@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karthigan Mageswaran | Software Engineer</title>
+    <!-- Embedded SVG Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text x=%2250%22 y=%2254%22 font-family=%22Arial, sans-serif%22 font-size=%2245%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>KM</text></svg>">
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
 </head>
@@ -12,90 +14,109 @@
         <div class="nav-container">
             <div class="logo">KM.</div>
             <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
             </nav>
-            <a href="mailto:m.karthigan31@gmail.com" class="btn-primary">Contact</a>
+            <a href="mailto:m.karthigan31@gmail.com" class="btn-outline">Contact Me</a>
         </div>
     </header>
 
     <main class="container">
+        <!-- Hero Section -->
         <section class="hero fade-in">
+            <div class="hero-background"></div>
             <div class="hero-content">
                 <h1 class="hero-title">Karthigan Mageswaran</h1>
-                <h2 class="hero-subtitle">Software Engineer</h2>
+                <h2 class="hero-subtitle">Software Engineer & Cloud Architect</h2>
                 <p class="hero-text">
                     Final-year Computer Science undergraduate at the University of Leicester. Architecting secure, production-grade cloud infrastructure, resilient backend systems, and multi-user platforms.
                 </p>
-                <div class="social-links">
-                    <a href="https://github.com/mkarthi31" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://linkedin.com/in/karthi-mageswaran" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://karthigan.com" target="_blank" rel="noopener">karthigan.com</a>
+                <div class="hero-actions">
+                    <a href="resume.pdf" target="_blank" class="btn-primary">Download CV</a>
+                    <div class="social-links">
+                        <a href="https://github.com/mkarthi31" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://linkedin.com/in/karthi-mageswaran" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Projects Section (Bento Box) -->
         <section id="projects" class="section fade-in">
             <h3 class="section-title">Engineering Projects</h3>
             <div class="bento-grid">
                 
+                <!-- Project 1 -->
                 <article class="bento-card highlight-card">
                     <div class="card-header">
-                        <h4>University Accommodation Allocation System</h4>
-                        <span class="status">Final Year Project</span>
+                        <div>
+                            <h4>University Accommodation Allocation System</h4>
+                            <span class="status">Final Year Project</span>
+                        </div>
+                        <a href="https://github.com/mkarthi31" target="_blank" class="repo-link">View Source &rarr;</a>
                     </div>
                     <p class="card-desc">
-                        Designed a four-stage hybrid allocation engine (group clustering, greedy preference matching) processing 25 concurrent applications in under 5 seconds. Engineered RBAC with server-side jurisdictional isolation and JWT session management. Built a GPT-4o-mini conversational assistant using Spring AI function-calling, grounded against curated knowledge bases to enforce policy boundaries.
+                        Designed a four-stage hybrid allocation engine (group clustering, greedy preference matching) processing 25 concurrent applications in under 5 seconds. Engineered RBAC with server-side jurisdictional isolation and JWT session management. Built a GPT-4o-mini conversational assistant using Spring AI function-calling, grounded against curated knowledge bases.
                     </p>
                     <div class="tech-stack">
-                        <span>Spring Boot 3.2</span>
-                        <span>React 18</span>
+                        <span class="tag-blue">Spring Boot 3.2</span>
+                        <span class="tag-blue">React 18</span>
                         <span>Stripe</span>
-                        <span>OpenAI (Spring AI)</span>
+                        <span>OpenAI API</span>
                         <span>MySQL</span>
                     </div>
                 </article>
 
+                <!-- Project 2 -->
                 <article class="bento-card">
                     <div class="card-header">
                         <h4>Personal Cybersecurity Dashboard</h4>
+                        <a href="https://github.com/mkarthi31/personal-cybersecurity-dashboard" target="_blank" class="repo-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
                     </div>
                     <p class="card-desc">
                         Standalone security monitoring tool assessing password entropy using the zxcvbn algorithm and simulating email breach threat-intelligence tracking. Implemented a local SQLite database for persistent alert logging.
                     </p>
                     <div class="tech-stack">
-                        <span>Python</span>
+                        <span class="tag-blue">Python</span>
                         <span>Streamlit</span>
                         <span>SQLite</span>
-                        <span>zxcvbn-python</span>
                     </div>
                 </article>
 
+                <!-- Project 3 -->
                 <article class="bento-card">
                     <div class="card-header">
                         <h4>Subscription Tracker</h4>
+                        <a href="https://github.com/mkarthi31/subscription-tracker" target="_blank" class="repo-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
                     </div>
                     <p class="card-desc">
                         Secure multi-user web application with Spring Security authentication, BCrypt-encrypted password reset flows, and automated scheduled financial alerts via full CRUD operations.
                     </p>
                     <div class="tech-stack">
-                        <span>Java</span>
+                        <span class="tag-blue">Java</span>
                         <span>Spring Security</span>
                         <span>MySQL</span>
                     </div>
                 </article>
 
+                <!-- Project 4 -->
                 <article class="bento-card">
                     <div class="card-header">
                         <h4>IBM SkillsBuild Integration</h4>
+                        <a href="https://github.com/mkarthi31/IBM-SkillsBuild-Gamified-App" target="_blank" class="repo-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
                     </div>
                     <p class="card-desc">
                         Collaborated in an Agile team to engineer backend REST APIs for user achievement and engagement tracking, ensuring the secure transmission of user metrics.
                     </p>
                     <div class="tech-stack">
-                        <span>Java</span>
+                        <span class="tag-blue">Java</span>
                         <span>Spring Boot</span>
                         <span>REST APIs</span>
                     </div>
@@ -103,10 +124,10 @@
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="section fade-in">
             <h3 class="section-title">Operational & Professional Experience</h3>
             <div class="timeline">
-                
                 <div class="timeline-item">
                     <div class="timeline-meta">
                         <span class="date">Jan 2022 – Present</span>
@@ -139,10 +160,39 @@
                         <p>Provided technical support across software, hardware, and network configuration for local businesses, achieving a 95% client satisfaction rate.</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
+        <!-- Education & Achievements Section -->
+        <section id="education" class="section fade-in">
+            <h3 class="section-title">Education & Achievements</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="date">Sep 2022 – Jul 2026</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>BSc Computer Science (Expected: First-Class Honours)</h4>
+                        <h5>University of Leicester</h5>
+                        <p><strong>Core Modules:</strong> Foundations of Cyber Security, Operating Systems & Networks, Software Architecture, Algorithms & Data Structures, Internet & Cloud Computing.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="date">2021</span>
+                        <span class="status-badge award-badge">National Award</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Winner, Network Rail Diverse IT Competition</h4>
+                        <h5>Network Rail</h5>
+                        <p>Selected as one of 50 winners nationwide for designing and presenting an innovative technology solution, demonstrating strong technical communication and problem-solving skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
         <section id="skills" class="section fade-in">
             <h3 class="section-title">Technical Competencies</h3>
             <div class="skills-grid">
@@ -162,15 +212,6 @@
                     <h4>Databases & Tools</h4>
                     <p>MySQL, SQLite, Hibernate, Git, Postman, Swagger, Agile / Scrum</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="about" class="section fade-in">
-            <div class="about-container">
-                <h3 class="section-title">Education & Achievements</h3>
-                <p><strong>BSc Computer Science (Expected: First-Class Honours)</strong> — University of Leicester (Sep 2022 – Jul 2026)</p>
-                <p class="modules">Core Modules: Foundations of Cyber Security, Operating Systems & Networks, Software Architecture, Algorithms & Data Structures, Internet & Cloud Computing.</p>
-                <p class="award"><em>Winner, Network Rail Diverse IT Competition (2021)</em> — Selected as one of 50 winners nationwide for an innovative tech solution.</p>
             </div>
         </section>
 
