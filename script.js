@@ -1,104 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     // -----------------------------
-    // Mobile Navigation Toggle
+    // Hardware-accelerated Scroll Animations
     // -----------------------------
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-    const mainNav = document.querySelector('.main-nav');
+    const animatedElements = document.querySelectorAll('.fade-in');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
 
-    mobileNavToggle.addEventListener('click', () => {
-        const isVisible = mainNav.getAttribute('data-visible');
-
-        if (isVisible === 'false' || isVisible === null) {
-            mainNav.setAttribute('data-visible', true);
-            mobileNavToggle.setAttribute('aria-expanded', true);
-        } else {
-            mainNav.setAttribute('data-visible', false);
-            mobileNavToggle.setAttribute('aria-expanded', false);
-        }
-    });
-
-    // -----------------------------
-    // Typing Effect
-    // -----------------------------
-    const typingElement = document.querySelector('.typing-effect');
-    if (typingElement) {
-        const words = [ "Computer Science Student"];
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function type() {
-            const currentWord = words[wordIndex];
-            const currentChars = isDeleting ?
-                currentWord.substring(0, charIndex--) :
-                currentWord.substring(0, charIndex++);
-
-            typingElement.textContent = currentChars;
-
-            if (!isDeleting && charIndex === currentWord.length + 1) {
-                isDeleting = true;
-                setTimeout(type, 2000); // Pause at end of word
-            } else if (isDeleting && charIndex === -1) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-                setTimeout(type, 500); // Pause before new word
-            } else {
-                const typingSpeed = isDeleting ? 75 : 150;
-                setTimeout(type, typingSpeed);
-            }
-        }
-        type();
-    }
-
-    // -----------------------------
-    // Scroll Animations
-    // -----------------------------
-    const animatedElements = document.querySelectorAll('.animated');
-
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Add class to trigger CSS transition
                 entry.target.classList.add('visible');
+                // Unobserve once visible for performance
                 observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.1
-    });
+    }, observerOptions);
 
     animatedElements.forEach(el => {
         observer.observe(el);
     });
 
     // -----------------------------
-    // Dark Mode Toggle
+    // Clean URL Hash Scrolling
     // -----------------------------
-    const themeToggle = document.querySelector('#checkbox');
-    const currentTheme = localStorage.getItem('theme');
-
-    // Function to set the theme
-    const setTheme = (theme) => {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        if (themeToggle) {
-            themeToggle.checked = theme === 'dark';
-        }
-    };
-
-    // Check saved theme in localStorage
-    if (currentTheme) {
-        setTheme(currentTheme);
-    } else {
-        // Check for user's system preference
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        setTheme(prefersDark ? 'dark' : 'light');
-    }
-
-    // Listener for the toggle switch
-    if(themeToggle) {
-        themeToggle.addEventListener('change', () => {
-            setTheme(themeToggle.checked ? 'dark' : 'light');
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                // Account for the fixed navbar height (approx 80px)
+                const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         });
-    }
+    });
 });
